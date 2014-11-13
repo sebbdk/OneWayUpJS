@@ -2,7 +2,7 @@
 * @Author: sebb
 * @Date:   2014-11-04 22:18:50
 * @Last Modified by:   sebb
-* @Last Modified time: 2014-11-05 01:27:15
+* @Last Modified time: 2014-11-13 00:59:27
 */
 'use strict';
 
@@ -19,8 +19,16 @@ Preload.prototype = {
 		this.load.onLoadComplete.addOnce(this.onLoadComplete, this);
 		this.load.setPreloadSprite(this.asset);
 		this.load.image('ground', 'assets/ground.png');
-		this.load.image('pilot', 'assets/pilot_01.png');
 		this.load.image('stars', 'assets/stars_repeat.png');
+		this.load.image('plane', 'assets/plane.png');
+		this.load.image('moon', 'assets/moon.png');
+		this.load.image('cloud_01', 'assets/cloud_01.png');
+		this.load.image('cloud_02', 'assets/cloud_02.png');
+		this.load.image('cloud_03', 'assets/cloud_03.png');
+		this.load.image('cloud_04', 'assets/cloud_04.png');
+		this.load.image('smoke', 'assets/texture.png');
+
+		this.game.load.atlasXML('pilot', 'assets/pilot.png', 'assets/pilot.xml');
 
 		this.game.load.audio('music', ['assets/music.mp3']);
 
