@@ -157,7 +157,7 @@ module.exports = Menu;
 * @Author: sebb
 * @Date:   2014-11-04 22:18:50
 * @Last Modified by:   sebb
-* @Last Modified time: 2014-11-13 02:05:50
+* @Last Modified time: 2014-11-13 02:16:48
 */
 'use strict';
 
@@ -230,8 +230,8 @@ Play.prototype = {
 		this.platform.body.setSize(0, 0, 100, 100);
 		this.platform.body.width = this.entities.width * 2;
 		this.platform.body.height = 50;
-		this.platform.body.y = this.pilot.y + 100;
-		this.platform.y = this.pilot.y;
+		this.platform.body.y = (this.game.height/2) * 0.80;
+		this.platform.y = this.platform.body.y;
 		this.platform.allowGravity = false;
 
 		this.game.physics.enable(this.platform, Phaser.Physics.ARCADE);
@@ -310,7 +310,7 @@ Play.prototype = {
 		this.game.camera.y = this.pilot.y - (this.game.height/2)
 
 		//debug
-		//this.game.debug.body(this.platform);
+		this.game.debug.body(this.platform);
 		this.game.debug.body(this.explosion.body);
 	},
 	deathHandler:function() {
